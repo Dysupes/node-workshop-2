@@ -1,0 +1,26 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "workshop 2 - week 2",
+  "main": "request-as-json.js",
+  "dependencies": {
+    "request": "^2.73.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dysupes/node-workshop-2.git"
+  },
+  "keywords": [
+    "callback"
+  ],
+  "author": "Dylan Pelletier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dysupes/node-workshop-2/issues"
+  },
+  "homepage": "https://github.com/Dysupes/node-workshop-2#readme"
+}
