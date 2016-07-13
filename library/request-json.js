@@ -1,3 +1,5 @@
+var request = require('request');
+
 function requestJson(url,callback){
     request(url, function(err, res){
         if(err){
@@ -12,6 +14,8 @@ function requestJson(url,callback){
         }
     });
 }
+
+
 
 module.exports = {
     requestJson: requestJson
