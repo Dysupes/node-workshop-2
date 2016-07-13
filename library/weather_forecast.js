@@ -1,9 +1,10 @@
 var weatherTracker = require('./request-json.js').requestJson;
 var prompt = require('prompt');
+
+
 var promptURL = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
 var colors = require('colors');
-var cli_table = require('cli-table');
-var node_emoji = require('node-emoji');
+var emoji = require('node-emoji');
 
 
 prompt.get('userLocation', function(err, content){
@@ -26,7 +27,7 @@ prompt.get('userLocation', function(err, content){
                 //console.log('The user\'s longitude is: ' + userLongitude);
                 weatherTracker(forecastAPI, function(err, res){
                     if(err){
-                        console.log('You have encountered an error.'); 
+                        console.log((emoji.emojify('You have encountered an error.' + ':poop:'))); 
                     }
                     else {
                         var userWeather = res;
@@ -34,8 +35,8 @@ prompt.get('userLocation', function(err, content){
                             function(daysNum){
                                 return daysNum.summary;
                             });
-                        console.log("The weather for today is: " + userWeather.daily.data[0].summary);    
-                        console.log("The weather for the next few days is: ");
+                        console.log((emoji.emojify(':sunny:' + "The weather for today is: ".red + userWeather.daily.data[0].summary)));    
+                        console.log((emoji.emojify(':cloud:' + "The weather for the next few days is: ".red)));
                         console.log(userForecast);
                        
                     
