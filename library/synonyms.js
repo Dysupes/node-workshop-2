@@ -11,8 +11,9 @@ prompt.get('userWord', function(err, content){
                 if(err){
                     console.log(err);
                 }
-                    console.log(result);
-                });
+                    console.log('Here are the synonyms of ' + content.userWord + ' : ' + result.adjective.syn);
+                    console.log('Here are the antonyms of ' + content.userWord + ' : ' + result.adjective.ant);
+            });
             
         }
-} )
+});
